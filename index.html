@@ -1,114 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
     <title>Admin Dashboard</title>
-</head>
-<body>
-    <aside class = "side-bar">
-        <div class="sidebar-header">
-            <img src="path-to-your-logo.svg" alt="Dashboard Logo" class="sidebar-logo">
-            <h1 class="sidebar-title">Dashboard</h1>
-        </div>
-        <nav class="sidebar-nav">
-            <ul class="nav-group nav-primary">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#messages">Messages</a></li>
-                <li><a href = "#history">History</a></li>
-                <li><a href = "#tasks">Tasks</a></li>
-                <li><a href = "#communities">Communities</a></li>
-            </ul>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="assets/images/dashboard-logo.svg"
+          alt="Dashboard Logo"
+          class="sidebar-logo"
+        />
+        <h1 class="sidebar-title">Dashboard</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul class="nav-group nav-primary">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#messages">Messages</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#tasks">Tasks</a></li>
+          <li><a href="#communities">Communities</a></li>
+        </ul>
 
-            <ul class="nav-group nav-secondary">
-                <li><a href="#settings">Settings</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#privacy">Privacy</a></li>
-            </ul>
-        </nav>
+        <ul class="nav-group nav-secondary">
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
     </aside>
-    <div class = main-content>
-        <header class = "top-bar">
-            <form action ="/search" method = "GET" class = "search-form">
-                <button type="submit" aria-label="Submit Search">
-                    <img src="search-icon.png" alt="search-submit" class="search-icon">
-                </button>
-                <input type = "search" name = "q" placeholder = "Search..." aria-label = "Search site">
-            </form>
-            <div class = "user-profile">
-                <img src="notification-icon.png" alt="Notifications" class="notification-icon">
-                <img src="user-avatar.png" alt="User Avatar" class="user-avatar">
-                <span class="user-name">John Doe</span>
+    <div class="main-content">
+      <header class="top-bar">
+        <form action="/search" method="GET" class="search-form">
+          <button type="submit" aria-label="Submit Search">
+            <img
+              src="assets/icons/search.svg"
+              alt=""
+              class="search-icon"
+            />
+          </button>
+          <input
+            type="search"
+            name="q"
+            placeholder="Search..."
+            aria-label="Search site"
+          />
+        </form>
+        <div class="user-profile">
+          <button
+            type="button"
+            class="notification-button"
+            aria-label="View notifications"
+          >
+            <img
+              src="assets/icons/notification.svg"
+              alt=""
+              class="notification-icon"
+            />
+          </button>
+          <img
+            src="assets/avatars/user-avatar.png"
+            alt="User avatar"
+            class="user-avatar"
+          />
+          <span class="user-name">John Doe</span>
+        </div>
+        <div class="user-greeting">
+          <img
+            src="assets/avatars/user-avatar.png"
+            alt="User avatar"
+            class="user-avatar"
+          />
+          <span class="greeting-subtext">Hi there,</span>
+          <h2 class="user-name">
+            Jonathan Yue <span class="username">(@Jonathan)</span>
+          </h2>
+        </div>
+        <div class="user-actions">
+          <button type="button" class="button button--primary">New</button>
+          <button type="button" class="button button--primary">Upload</button>
+          <button type="button" class="button button--primary">Share</button>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        <section class="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading" class="section-title">Your Projects</h2>
+          <article class="project-card">
+            <h3 class="project-title">Project Alpha</h3>
+            <p class="project-description">
+              A brief description of Project Alpha.
+            </p>
+            <div class="project-buttons">
+              <button
+                type="button"
+                class="favorite-btn"
+                aria-label="Favorite Project Alpha"
+              >
+                <img src="assets/icons/favorite.svg" alt="" />
+              </button>
+              <button
+                type="button"
+                class="preview-btn"
+                aria-label="Preview Project Alpha"
+              >
+                <img src="assets/icons/preview.svg" alt="" />
+              </button>
+              <button
+                type="button"
+                class="share-btn"
+                aria-label="Share Project Alpha"
+              >
+                <img src="assets/icons/share.svg" alt="" />
+              </button>
             </div>
-            <div class = "user-greeting">
-                <img src = "user-avatar.png" alt = "User Avatar" class = "user-avatar">
-                <span class="greeting-subtext">Hi there,</span>
-                <h2 class="user-name">Jonathan Yue <span class="username">(@Jonathan)</span></h2>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">Project Beta</h3>
+            <p class="project-description">
+              A brief description of Project Beta.
+            </p>
+            <div class="project-buttons">
+              <button
+                type="button"
+                class="favorite-btn"
+                aria-label="Favorite Project Beta"
+              >
+                <img src="assets/icons/favorite.svg" alt="" />
+              </button>
+              <button
+                type="button"
+                class="preview-btn"
+                aria-label="Preview Project Beta"
+              >
+                <img src="assets/icons/preview.svg" alt="" />
+              </button>
+              <button
+                type="button"
+                class="share-btn"
+                aria-label="Share Project Beta"
+              >
+                <img src="assets/icons/share.svg" alt="" />
+              </button>
             </div>
-            <div class = "user-actions">
-                <button class="new-post-btn">New Post</button>
-                <button class = "upload-btn">Upload</button>
-                <button class = "share-btn">Share</button>
-            </div>
-        </header>
-        <main class = dashboard-content>
-            <section class = "projects">
-                <h2 class = "section-title">Your Projects</h2>
-                <article class = "project-card">
-                    <h3 class = "project-title">Project Alpha</h3>
-                    <p class = "project-description">A brief description of Project Alpha.</p>
-                    <div class = "project-buttons">
-                        <button class = "favorite-btn">
-                            <img src="favorite-icon.png" alt="Favorite">
-                        </button>
-                        <button class = "preview-btn">
-                            <img src="preview-icon.png" alt="Preview">
-                        </button>
-                        <button class = "share-btn">
-                            <img src="share-icon.png" alt="Share">
-                        </button>
-                    </div>
-                </article>
-                <article class = "project-card">
-                    <h3 class = "project-title">Project Beta</h3>
-                    <p class = "project-description">A brief description of Project Beta.</p>
-                    <div class = "project-buttons">
-                        <button class = "favorite-btn">
-                            <img src="favorite-icon.png" alt="Favorite">
-                        </button>
-                        <button class = "preview-btn">
-                            <img src="preview-icon.png" alt="Preview">
-                        </button>
-                        <button class = "share-btn">
-                            <img src="share-icon.png" alt="Share">
-                        </button>
-                    </div>
-                </article>
-            </section>
-            <section class = "announcements">
-                <h2 class = "section-title">Announcements</h2>
-                <div class = "announcement-card">
-                    <article class = "announcement">
-                        <h3 class = "announcement-title">New Feature Release</h3>
-                        <p class = "announcement-description">We are excited to announce the release of our new feature...</p>
-                    </article>
-                    <article class = "announcement">
-                        <h3 class = "announcement-title">Scheduled Maintenance</h3>
-                        <p class = "announcement-description">Please be advised that there will be scheduled maintenance on...</p>
-                    </article>
-                    <article class = "announcement">
-                        <h3 class = "announcement-title">Community Event</h3>
-                        <p class = "announcement-description">Join us for our upcoming community event where you can...</p>
-                    </article>
+          </article>
+        </section>
+        <section class="announcements" aria-labelledby="announcements-heading">
+          <h2 id="announcements-heading" class="section-title">
+            Announcements
+          </h2>
+          <div class="announcement-card">
+            <article class="announcement">
+              <h3 class="announcement-title">New Feature Release</h3>
+              <p class="announcement-description">
+                We are excited to announce the release of our new feature...
+              </p>
+            </article>
+            <article class="announcement">
+              <h3 class="announcement-title">Scheduled Maintenance</h3>
+              <p class="announcement-description">
+                Please be advised that there will be scheduled maintenance on...
+              </p>
+            </article>
+            <article class="announcement">
+              <h3 class="announcement-title">Community Event</h3>
+              <p class="announcement-description">
+                Join us for our upcoming community event where you can...
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="trending" aria-labelledby="trending-heading">
+          <h2 id="trending-heading" class="section-title">Trending</h2>
+          <div class="trending-card">
+            <ul class="trending-list">
+              <li class="trending-item">
+                <img
+                  src="assets/avatars/tegan.png"
+                  alt="Tegan profile picture"
+                  class="trending-avatar"
+                />
+                <div class="trending-info">
+                  <span class="user-handle">@tegan</span>
+                  <p class="user-tagline">World Peace Builder</p>
                 </div>
-            </section>
-            <section class = "trending">
-                <h2 class = "section-title">Trending</h2>
-            </section>
-        </main>
+              </li>
+
+              <li class="trending-item">
+                <img
+                  src="assets/avatars/morgan.png"
+                  alt="Morgan profile picture"
+                  class="trending-avatar"
+                />
+                <div class="trending-info">
+                  <span class="user-handle">@morgan</span>
+                  <p class="user-tagline">Super Cool Project</p>
+                </div>
+              </li>
+
+              <li class="trending-item">
+                <img
+                  src="assets/avatars/alex.png"
+                  alt="Alex profile picture"
+                  class="trending-avatar"
+                />
+                <div class="trending-info">
+                  <span class="user-handle">@alex</span>
+                  <p class="user-tagline">Innovative Designer</p>
+                </div>
+              </li>
+              <li class="trending-item">
+                <img
+                  src="assets/avatars/sam.png"
+                  alt="Sam profile picture"
+                  class="trending-avatar"
+                />
+                <div class="trending-info">
+                  <span class="user-handle">@sam</span>
+                  <p class="user-tagline">Tech Enthusiast</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
     </div>
-</body>
+  </body>
 </html>
