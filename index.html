@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "script.js"></script>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <aside class = "side-bar">
+        <div class="sidebar-header">
+            <img src="path-to-your-logo.svg" alt="Dashboard Logo" class="sidebar-logo">
+            <h1 class="sidebar-title">Dashboard</h1>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-group nav-primary">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#messages">Messages</a></li>
+                <li><a href = "#history">History</a></li>
+                <li><a href = "#tasks">Tasks</a></li>
+                <li><a href = "#communities">Communities</a></li>
+            </ul>
+
+            <ul class="nav-group nav-secondary">
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class = main-content>
+        <header class = "top-bar">
+            <form action ="/search" method = "GET" class = "search-form">
+                <button type="submit" aria-label="Submit Search">
+                    <img src="search-icon.png" alt="search-submit" class="search-icon">
+                </button>
+                <input type = "search" name = "q" placeholder = "Search..." aria-label = "Search site">
+            </form>
+            <div class = "user-profile">
+                <img src="notification-icon.png" alt="Notifications" class="notification-icon">
+                <img src="user-avatar.png" alt="User Avatar" class="user-avatar">
+                <span class="user-name">John Doe</span>
+            </div>
+            <div class = "user-greeting">
+                <img src = "user-avatar.png" alt = "User Avatar" class = "user-avatar">
+                <span class="greeting-subtext">Hi there,</span>
+                <h2 class="user-name">Jonathan Yue <span class="username">(@Jonathan)</span></h2>
+            </div>
+            <div class = "user-actions">
+                <button class="new-post-btn">New Post</button>
+                <button class = "upload-btn">Upload</button>
+                <button class = "share-btn">Share</button>
+            </div>
+        </header>
+        <main class = dashboard-content>
+            <section class = "projects">
+                <h2 class = "section-title">Your Projects</h2>
+                <article class = "project-card">
+                    <h3 class = "project-title">Project Alpha</h3>
+                    <p class = "project-description">A brief description of Project Alpha.</p>
+                    <div class = "project-buttons">
+                        <button class = "favorite-btn">
+                            <img src="favorite-icon.png" alt="Favorite">
+                        </button>
+                        <button class = "preview-btn">
+                            <img src="preview-icon.png" alt="Preview">
+                        </button>
+                        <button class = "share-btn">
+                            <img src="share-icon.png" alt="Share">
+                        </button>
+                    </div>
+                </article>
+                <article class = "project-card">
+                    <h3 class = "project-title">Project Beta</h3>
+                    <p class = "project-description">A brief description of Project Beta.</p>
+                    <div class = "project-buttons">
+                        <button class = "favorite-btn">
+                            <img src="favorite-icon.png" alt="Favorite">
+                        </button>
+                        <button class = "preview-btn">
+                            <img src="preview-icon.png" alt="Preview">
+                        </button>
+                        <button class = "share-btn">
+                            <img src="share-icon.png" alt="Share">
+                        </button>
+                    </div>
+                </article>
+            </section>
+            <section class = "announcements">
+                <h2 class = "section-title">Announcements</h2>
+                <div class = "announcement-card">
+                    <article class = "announcement">
+                        <h3 class = "announcement-title">New Feature Release</h3>
+                        <p class = "announcement-description">We are excited to announce the release of our new feature...</p>
+                    </article>
+                    <article class = "announcement">
+                        <h3 class = "announcement-title">Scheduled Maintenance</h3>
+                        <p class = "announcement-description">Please be advised that there will be scheduled maintenance on...</p>
+                    </article>
+                    <article class = "announcement">
+                        <h3 class = "announcement-title">Community Event</h3>
+                        <p class = "announcement-description">Join us for our upcoming community event where you can...</p>
+                    </article>
+                </div>
+            </section>
+            <section class = "trending">
+                <h2 class = "section-title">Trending</h2>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
